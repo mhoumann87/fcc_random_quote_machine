@@ -19,7 +19,6 @@ class Quote extends React.Component {
     };
 
     this.getQuote = this.getQuote.bind(this);
-    this.tweetQuote = this.tweetQuote.bind(this);
   }
 
   /* On first load, the page shows a random quote with an author */
@@ -49,16 +48,10 @@ class Quote extends React.Component {
       .catch(error => console.error(error));
   }
 
-  tweetQuote() {
-    // The link for tweet qoute should include "twitter.com/intent/tweet"
-    let url = `https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=`;
-    let quote = encodeURIComponent(
-      `"${this.state.randomQuote}" from ${this.state.author}`
-    );
-    window.open(`${url}${quote}`);
-  }
-
   render() {
+    let url = encodeURIComponent(
+      `"${this.state.randomQuote}" from  ${this.state.author}`
+    );
     return (
       // A wrapper container with the id "quote-box"
       <div id="quote-box">
@@ -74,12 +67,19 @@ class Quote extends React.Component {
         </div>
         <div id="author-box">
           {/* Inside "#quote-box" is an element id="author" */}
-          <em>Author: {this.state.author}</em>
+          <em id="author">Author: {this.state.author}</em>
           {/* inside "#quote-box" is a clickeable element with an id="tweet-quote" */}
-          <button id="tweet-quote" onClick={this.tweetQuote}>
+          <a
+            id="tweet-quote"
+            href={
+              "https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=" +
+              url
+            }
+            target="_blank"
+          >
             <i class="fab fa-twitter" />
             &nbsp;Tweet this Quote
-          </button>
+          </a>
         </div>
 
         {/* Inside "#quote-box" is a button id="new-quote" */}

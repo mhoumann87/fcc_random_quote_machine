@@ -66,12 +66,18 @@ button {
   border-radius: 10px;
   outline: none;
   box-shadow: 1px 1px 1 2px 4px rgba(40, 40, 40, 0.1);
+  cursor: pointer;
 }
 
 #tweet-quote {
   background-color: #00aced;
   color: #f0f5f9;
   transition: all 0.4s ease-out;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 1 2px 4px rgba(40, 40, 40, 0.1);
+  cursor: pointer;
+  text-decoration: none;
 }
 
 #tweet-quote:hover {
