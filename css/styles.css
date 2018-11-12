@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css?family=Architects+Daughter|Basic");
+body {
+  background-color: #f0f5f9;
+  font-size: 100%;
+  font-family: "Basic", sans-serif;
+}
+
+p,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #1e2022;
+}
+
+header {
+  background-color: #1e2022;
+  margin: 0;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+header h1 {
+  color: #f0f5f9;
+}
+
+/* #quote-box shoule be horizontally aligned */
+
+#quote-box {
+  width: 60%;
+  margin: 2rem auto;
+}
+
+#quote-box #text {
+  font-family: "Architects Daughter", cursive;
+  font-size: 1.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+blockquote {
+  flex: 1 1 80%;
+}
+
+.quote-icon {
+  color: #52616a;
+  font-size: 2.4rem;
+  flex: 1 0 10%;
+}
+
+#author-box {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-content: baseline;
+  padding: 3rem 0;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  box-shadow: 1px 1px 1 2px 4px rgba(40, 40, 40, 0.1);
+}
+
+#tweet-quote {
+  background-color: #00aced;
+  color: #f0f5f9;
+  transition: all 0.4s ease-out;
+}
+
+#tweet-quote:hover {
+  background-color: #0084b4;
+}
+
+#new-quote {
+  background-color: #10cb0e;
+  color: #f0f5f9;
+  transition: all 0.4s ease-out;
+}
+
+#new-quote:hover {
+  background-color: #0d9e0b;
+}
